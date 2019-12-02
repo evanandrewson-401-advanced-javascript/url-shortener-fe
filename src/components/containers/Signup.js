@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import UsernameAndPassForm from '../session/UsernameAndPassForm';
 import PropTypes from 'prop-types';
+import { signup } from '../../actions/sessionActions';
 
 const Signup = ({ handleSignup }) => {
   return (
