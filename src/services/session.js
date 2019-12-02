@@ -1,5 +1,5 @@
 export const signupFetch = (username, password) => {
-  return fetch('http://localhost:7890/api/v1/auth/', {
+  return fetch('http://localhost:7890/api/v1/auth/signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
