@@ -6,7 +6,7 @@ const UsernameAndPassForm = ({ handleSubmit, buttonText }) => {
   const [password, updatePassword] = useState('Password');
 
   return (
-    <form onSubmit={event => handleSubmit(event, buttonText, username, password)}>
+    <form onSubmit={event => handleSubmit(event, username, password)}>
       <input type='text' value={username} onChange={({ target }) => updateUsername(target.value)} />
       <input type='password' value={password} onChange={({ target }) => updatePassword(target.value)} />
       <button>{buttonText}</button>

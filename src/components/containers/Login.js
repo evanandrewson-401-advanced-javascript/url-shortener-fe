@@ -3,29 +3,29 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import UsernameAndPassForm from '../session/UsernameAndPassForm';
 import PropTypes from 'prop-types';
-import { signup } from '../../actions/sessionActions';
+import { login } from '../../actions/sessionActions';
 
-const Signup = ({ handleSignup }) => {
+const Login = ({ handleLogin }) => {
   return (
     <>
-      <UsernameAndPassForm buttonText='Sign up' handleSubmit={handleSignup} />
-      <Link to='/login'>Log in</Link>
+      <UsernameAndPassForm buttonText='Log in' handleSubmit={handleLogin} />
+      <Link to='/'>Sign up</Link>
     </>
   );
 };
 
-Signup.propTypes = {
-  handleSignup: PropTypes.func.isRequired
+Login.propTypes = {
+  handleLogin: PropTypes.func.isRequired
 };
 
 const mapDispatchToProps = dispatch => ({
-  handleSignup(event, username, password) {
+  handleLogin(event, username, password) {
     event.preventDefault();
-    dispatch(signup(username, password));
+    dispatch(login(username, password));
   }
 });
 
 export default connect(
   null,
   mapDispatchToProps
-)(Signup);
+)(Login);
