@@ -5,7 +5,7 @@ import UsernameAndPassForm from '../session/UsernameAndPassForm';
 import PropTypes from 'prop-types';
 import { signup } from '../../actions/sessionActions';
 
-const Signup = ({ handleSignup, history }) => {
+const Signup = ({ handleSignup }) => {
   return (
     <>
       <UsernameAndPassForm buttonText='Sign up' handleSubmit={handleSignup} />
