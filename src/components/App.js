@@ -7,6 +7,7 @@ import UrlForm from './urlForm/UrlForm';
 import { sessionVerify } from '../actions/sessionActions';
 import { getSessionId, getSessionLoading } from '../selectors/sessionSelectors';
 import LinkList from './links/LinkList';
+import Header from './header/Header';
 
 const PrivateRoute = ({ ...rest }) => {
   const sessionId = useSelector(getSessionId);
@@ -27,6 +28,7 @@ const PrivateRoute = ({ ...rest }) => {
 const App = () => {
   return (
     <Router>
+      <Header />
       <Switch>
         <Route exact path='/' component={Signup} />
         <Route path='/login' component={Login} />
