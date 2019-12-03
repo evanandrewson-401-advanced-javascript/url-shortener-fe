@@ -9,7 +9,7 @@ export const shortenUrl = (url) => {
 };
 
 export const postUrl = ({ original_url, code }) => {
-  return fetch('http://localhost:7891/api/vi/link/create', {
+  return fetch('http://localhost:7890/api/v1/link/create', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
