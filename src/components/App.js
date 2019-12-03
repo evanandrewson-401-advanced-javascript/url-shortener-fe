@@ -6,6 +6,7 @@ import Login from './containers/Login';
 import UrlForm from './urlForm/UrlForm';
 import { sessionVerify } from '../actions/sessionActions';
 import { getSessionId, getSessionLoading } from '../selectors/sessionSelectors';
+import LinkList from './links/LinkList';
 
 const PrivateRoute = ({ ...rest }) => {
   const sessionId = useSelector(getSessionId);
@@ -30,6 +31,7 @@ const App = () => {
         <Route exact path='/' component={Signup} />
         <Route path='/login' component={Login} />
         <PrivateRoute path='/input' component={UrlForm} />
+        <PrivateRoute path='/links' component={LinkList} />
       </Switch>
     </Router>
   );
