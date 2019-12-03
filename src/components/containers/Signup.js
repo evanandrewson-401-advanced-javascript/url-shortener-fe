@@ -5,7 +5,7 @@ import UsernameAndPassForm from '../session/UsernameAndPassForm';
 import PropTypes from 'prop-types';
 import { signup } from '../../actions/sessionActions';
 
-const Signup = ({ handleSignup }) => {
+const Signup = ({ handleSignup, history }) => {
   return (
     <>
       <UsernameAndPassForm buttonText='Sign up' handleSubmit={handleSignup} />
@@ -19,9 +19,10 @@ Signup.propTypes = {
 };
 
 const mapDispatchToProps = dispatch => ({
-  handleSignup(event, username, password) {
+  handleSignup(event, username, password, history) {
     event.preventDefault();
     dispatch(signup(username, password));
+    history.push('/input');
   }
 });
 
