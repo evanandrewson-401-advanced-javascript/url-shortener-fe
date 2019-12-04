@@ -12,7 +12,6 @@ const LinkItem = ({ link }) => {
   useEffect(() => {
     getHit(link._id).then(result => {
       setHit(result);
-      console.log(result);
     });
   }, []);
 
