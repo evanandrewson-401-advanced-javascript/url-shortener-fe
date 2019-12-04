@@ -1,0 +1,18 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: auto;
+
+    input {
+        width: 25vw;
+        font-size: 2em;
+        text-align: center;
+        margin: auto; 
+    }
+
+    button {
+        width: 12.5vw;
+        margin: auto;
+    }
+}

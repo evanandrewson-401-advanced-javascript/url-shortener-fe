@@ -4,13 +4,14 @@ import { connect } from 'react-redux';
 import UsernameAndPassForm from '../session/UsernameAndPassForm';
 import PropTypes from 'prop-types';
 import { signup } from '../../actions/sessionActions';
+import styles from './Auth.css';
 
 const Signup = ({ handleSignup }) => {
   return (
-    <>
+    <div className={styles.auth}>
       <UsernameAndPassForm buttonText='Sign up' handleSubmit={handleSignup} />
       <Link to='/login'>Log in</Link>
-    </>
+    </div>
   );
 };
 

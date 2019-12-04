@@ -1,17 +1,19 @@
 .Header {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     background-color: black;
     color: white;
 
     h1 {
         font-size: 4em;
+        margin: 0;
         flex: 1;
         text-align: center;
     }
 
     nav {
         display: flex;
-        flex-direction: column;
         text-decoration: none;
         justify-content: space-around;
         font-size: 2em;

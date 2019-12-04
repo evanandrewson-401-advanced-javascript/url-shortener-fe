@@ -5,15 +5,16 @@ import UsernameAndPassForm from '../session/UsernameAndPassForm';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/sessionActions';
 import { getSessionId, getSessionError } from '../../selectors/sessionSelectors';
+import styles from './Auth.css';
 
 const Login = ({ handleLogin, sessionError, sessionId }) => {
   if(sessionId) return <Redirect to='/input' />;
   return (
-    <>
+    <div className={styles.auth}>
       <UsernameAndPassForm buttonText='Log in' handleSubmit={handleLogin} />
       <Link to='/'>Sign up</Link>
       {sessionError && <p>{sessionError}</p>}
-    </>
+    </div>
   );
 };
 
